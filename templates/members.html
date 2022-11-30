@@ -1,0 +1,25 @@
+ {% extends "base.html" %}
+ {% block title %}{{ title }} {% endblock%}
+{% block content %}
+
+
+ <div class="container">
+<h1>Members</h1>
+<br/>
+<form action="/members" METHOD="POST">
+    <input type="text" placeholder="Name" name="name">
+    <input type="submit" value="Add Name" class="btn btn-secondary">
+</form>
+<br><br/>
+{% for member in members %}
+<h4> 
+{{ member.name }}
+</h4>
+{% endfor %}
+
+
+
+
+</div>
+
+{% endblock %}
